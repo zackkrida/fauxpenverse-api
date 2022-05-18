@@ -51,7 +51,7 @@ class AudioSearchRequestSerializer(
         required=False,
     )
     length = EnumCharField(
-        plural="audio lengths",
+        plural="lengths",
         enum_var=LENGTHS,
         required=False,
     )
@@ -103,8 +103,8 @@ class AudioSerializer(AudioHyperlinksSerializer, MediaSerializer):
                 "duration",
                 "bit_rate",
                 "sample_rate",
-                "waveform",
-                "peaks",
+                "waveform",  # hyperlink to the endpoint that generates the waveform
+                "peaks",  # waveform peaks, if they have already been generated
             ],
             key=lambda val: field_pos_map.get(val, 999),
         )
