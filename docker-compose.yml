@@ -12,7 +12,7 @@ services:
       - api-postgres:/var/lib/postgresql/data
 
   thumbnails:
-    image: ghcr.io/wordpress/openverse-imaginary:latest
+    image: ghcr.io/wordpress/fauxpenverse-imaginary:latest
     ports:
       - "8222:8222"
     environment:
@@ -68,7 +68,7 @@ services:
 
   web:
     build: ./api/
-    image: openverse-api
+    image: fauxpenverse-api
     volumes:
       - ./api:/api
     ports:
@@ -85,7 +85,7 @@ services:
 
   ingestion_server:
     build: ./ingestion_server/
-    image: openverse-ingestion_server
+    image: fauxpenverse-ingestion_server
     command: gunicorn -c ./gunicorn.conf.py
     ports:
       - "8001:8001"
@@ -102,7 +102,7 @@ services:
 
   indexer_worker:
     build: ./ingestion_server/
-    image: openverse-ingestion_server
+    image: fauxpenverse-ingestion_server
     command: gunicorn -c ./gunicorn_worker.conf.py
     ports:
       - "8002:8002"

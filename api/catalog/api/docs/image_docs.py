@@ -85,7 +85,7 @@ optionally filter results by
 class ImageStats(MediaStats):
     desc = f"""
 image_stats is an API endpoint to get a list of all content providers and their
-respective number of images in the Openverse catalog.
+respective number of images in the fauxpenverse catalog.
 
 {MediaStats.desc}"""
 
@@ -176,7 +176,7 @@ By using this endpoint, you can get the details of related images such as
 class ImageComplain(MediaComplain):
     desc = f"""
 images_report_create is an API endpoint to report an issue about a specified image ID to
-Openverse.
+fauxpenverse.
 
 By using this endpoint, you can report an image if it infringes copyright, contains
 mature or sensitive content and others.

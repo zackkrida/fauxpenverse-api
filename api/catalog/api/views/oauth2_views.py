@@ -47,7 +47,7 @@ and Authenticate section for instructions on registering access to the API via O
 > `client_secret` can impersonate your application.
 
 Authenticated users have higher rate limits than anonymous users. Additionally, by
-identifying yourself, you can request Openverse to adjust your personal rate limit
+identifying yourself, you can request fauxpenverse to adjust your personal rate limit
 depending on your organization's needs.
 
 {refer_sample}"""
@@ -66,8 +66,8 @@ depending on your organization's needs.
 curl \\
   -X POST \\
   -H "Content-Type: application/json" \\
-  -d '{"name": "My amazing project", "description": "To access Openverse API", "email": "user@example.com"}' \\
-  https://api.openverse.engineering/v1/auth_tokens/register
+  -d '{"name": "My amazing project", "description": "To access fauxpenverse API", "email": "user@example.com"}' \\
+  https://api.fauxpenverse.engineering/v1/auth_tokens/register
 """  # noqa: E501
 
     register_api_oauth2_request = openapi.Schema(
@@ -81,7 +81,7 @@ curl \\
                 max_length=150,
                 unique=True,
                 description="A unique human-readable name for your application "
-                "or project requiring access to the Openverse API.",
+                "or project requiring access to the fauxpenverse API.",
             ),
             "description": openapi.Schema(
                 title="Description",
@@ -105,7 +105,7 @@ curl \\
         },
         example={
             "name": "My amazing project",
-            "description": "To access Openverse API",
+            "description": "To access fauxpenverse API",
             "email": "user@example.com",
         },
     )
@@ -145,7 +145,7 @@ curl \\
         token = verification.code
         link = request.build_absolute_uri(reverse("verify-email", [token]))
         verification_msg = f"""
-To verify your Openverse API credentials, click on the following link:
+To verify your fauxpenverse API credentials, click on the following link:
 
 {link}
 
@@ -238,7 +238,7 @@ You can use this endpoint to get information about your API key such as
     key_info_bash = """
 curl \\
   -H "Authorization: Bearer DLBYIcfnKfolaXKcmMC8RIDCavc2hW" \\
-  http://api.openverse.engineering/v1/rate_limit
+  http://api.fauxpenverse.engineering/v1/rate_limit
 """
 
     @swagger_auto_schema(

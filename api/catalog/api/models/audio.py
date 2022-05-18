@@ -123,7 +123,7 @@ class AudioAddOn(OpenLedgerModel):
         # results in _about_ 1000 peaks. We use 1500 to give
         # sufficient wiggle room should we have any outlier
         # files pop up.
-        # https://github.com/WordPress/openverse-api/blob/a7955c86d43bff504e8d41454f68717d79dd3a44/api/catalog/api/utils/waveform.py#L71
+        # https://github.com/zackkrida/fauxpenverse-api/blob/a7955c86d43bff504e8d41454f68717d79dd3a44/api/catalog/api/utils/waveform.py#L71
         size=1500,
         help_text=(
             "The waveform peaks. A list of floats in"

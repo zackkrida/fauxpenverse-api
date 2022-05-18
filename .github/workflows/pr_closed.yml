@@ -21,6 +21,6 @@ jobs:
       - name: Push cleaned branch
         run: |
           git config --global user.name 'PR Closed action'
-          git config --global user.email 'openverse@wordpress.org'
+          git config --global user.email 'fauxpenverse@wordpress.org'
           git commit -am 'Clean preview for PR ${{ github.event.pull_request.number }}'
           git push

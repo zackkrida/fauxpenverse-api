@@ -2,7 +2,7 @@ version: "2.4"
 services:
   ingestion_server:
     # Allow the image tag to be set to a specific version, default to latest
-    image: ghcr.io/wordpress/openverse-ingestion_server:${IMAGE_TAG:-latest}
+    image: ghcr.io/wordpress/fauxpenverse-ingestion_server:${IMAGE_TAG:-latest}
     ports:
       - "8001:8001"
     env_file:

@@ -14,7 +14,7 @@ import requests
 log = logging.getLogger(__name__)
 
 TMP_DIR = pathlib.Path("/tmp").resolve()
-UA_STRING = "OpenverseWaveform/0.0 (https://wordpress.org/openverse)"
+UA_STRING = "fauxpenverseWaveform/0.0 (https://wordpress.org/fauxpenverse)"
 
 
 def ext_from_url(url):

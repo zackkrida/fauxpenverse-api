@@ -6,15 +6,15 @@ Interested in improving our documentation? Here’s what you need to know before
 
 ## Introduction
 
-Openverse API uses [drf-yasg](https://github.com/axnsan12/drf-yasg), which is a tool that generates real Swagger/OpenAPI 2.0 specifications from a Django Rest Framework API.
+fauxpenverse API uses [drf-yasg](https://github.com/axnsan12/drf-yasg), which is a tool that generates real Swagger/OpenAPI 2.0 specifications from a Django Rest Framework API.
 
 <br/>
 
 ## How to Start Contributing
 
-- Run the server locally by following this [link](https://github.com/WordPress/openverse-api#running-the-server-locally)
+- Run the server locally by following this [link](https://github.com/zackkrida/fauxpenverse-api#running-the-server-locally)
 - Update documentation
-- Make sure the updates passed the automated tests in this [file](https://github.com/WordPress/openverse-api/blob/master/.github/workflows/integration-tests.yml)
+- Make sure the updates passed the automated tests in this [file](https://github.com/zackkrida/fauxpenverse-api/blob/master/.github/workflows/integration-tests.yml)
 - Commit and push
 - Create pull request by following [GitHub Repo Guidelines](https://opensource.creativecommons.org/contributing-code/github-repo-guidelines/)
 
@@ -56,7 +56,7 @@ The description for API endpoint.
 image_stats_description = \
   """
   image_stats is an API endpoint to get a list of all content providers
-  and their respective number of images in the Openverse catalog.
+  and their respective number of images in the fauxpenverse catalog.
 
   You can use this endpoint to get details about content providers
   such as `source_name`, `image_count`, `display_name`, and `source_url`.
@@ -120,7 +120,7 @@ register_api_oauth2_request = openapi.Schema(
       max_length=150,
       unique=True,
       description="A unique human-readable name for your application "
-                  "or project requiring access to the Openverse API."
+                  "or project requiring access to the fauxpenverse API."
     ),
     'description': openapi.Schema(
       title="Description",
@@ -167,7 +167,7 @@ Code examples on how to use the API endpoints. The current API documentation pro
 image_stats_bash = \
   """
   # Get a list of content providers and their image count
-  curl -H "Authorization: Bearer DLBYIcfnKfolaXKcmMC8RIDCavc2hW" http://api.openverse.engineering/v1/sources
+  curl -H "Authorization: Bearer DLBYIcfnKfolaXKcmMC8RIDCavc2hW" http://api.fauxpenverse.engineering/v1/sources
   """
 
 @swagger_auto_schema(operation_id='image_stats',

@@ -30,7 +30,7 @@ class AbstractMedia(
 ):
     """
     Generic model from which to inherit all media classes. This class stores
-    information common to all media types indexed by Openverse.
+    information common to all media types indexed by fauxpenverse.
     """
 
     watermarked = models.BooleanField(blank=True, null=True)
@@ -95,7 +95,7 @@ class AbstractMedia(
 
     class Meta:
         """
-        Meta class for all media types indexed by Openverse. All concrete media
+        Meta class for all media types indexed by fauxpenverse. All concrete media
         classes should inherit their Meta class from this.
         """
 
@@ -133,7 +133,7 @@ class AbstractMediaReport(models.Model):
     reason = models.CharField(
         max_length=20,
         choices=REPORT_CHOICES,
-        help_text="The reason to report media to Openverse.",
+        help_text="The reason to report media to fauxpenverse.",
     )
     description = models.TextField(
         max_length=500,

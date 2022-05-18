@@ -1,5 +1,5 @@
 name: New PR notification
-# ℹ️ https://github.com/WordPress/openverse/blob/main/.github/GITHUB.md#new-pr-notification
+# ℹ️ https://github.com/zackkrida/fauxpenverse/blob/main/.github/GITHUB.md#new-pr-notification
 
 on:
   pull_request_target:

@@ -1,7 +1,7 @@
 import os
 
 
-origin = os.getenv("AUDIO_REQ_ORIGIN", "https://api.openverse.engineering")
+origin = os.getenv("AUDIO_REQ_ORIGIN", "https://api.fauxpenverse.engineering")
 
 identifier = "8624ba61-57f1-4f98-8a85-ece206c319cf"
 
@@ -119,8 +119,8 @@ audio_related_200_example = {
                 "license_version": "2.0",
                 "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
                 "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=3536953",  # noqa: E501
-                "detail_url": "http://api.openverse.engineering/v1/audio/36537842-b067-4ca0-ad67-e00ff2e06b2e",  # noqa: E501
-                "related_url": "http://api.openverse.engineering/v1/recommendations/audio/36537842-b067-4ca0-ad67-e00ff2e06b2e",  # noqa: E501
+                "detail_url": "http://api.fauxpenverse.engineering/v1/audio/36537842-b067-4ca0-ad67-e00ff2e06b2e",  # noqa: E501
+                "related_url": "http://api.fauxpenverse.engineering/v1/recommendations/audio/36537842-b067-4ca0-ad67-e00ff2e06b2e",  # noqa: E501
                 "fields_matched": ["description", "title"],
                 "tags": [{"name": "exam"}, {"name": "tactics"}],
             }

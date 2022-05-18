@@ -2,7 +2,7 @@ import os
 
 
 token = os.getenv("AUDIO_REQ_TOKEN", "DLBYIcfnKfolaXKcmMC8RIDCavc2hW")
-origin = os.getenv("AUDIO_REQ_ORIGIN", "https://api.openverse.engineering")
+origin = os.getenv("AUDIO_REQ_ORIGIN", "https://api.fauxpenverse.engineering")
 
 auth = f'-H "Authorization: Bearer {token}"' if token else ""
 identifier = "cdbd3bf6-1745-45bb-b399-61ee149cd58a"
@@ -72,5 +72,5 @@ image_oembed_curl = f"""
 # Retrieve embedded content from an image's URL
 curl \\
   {auth} \\
-  "{origin}/v1/images/oembed/?url=https://wordpress.org/openverse/photos/{identifier}"
+  "{origin}/v1/images/oembed/?url=https://wordpress.org/fauxpenverse/photos/{identifier}"
 """

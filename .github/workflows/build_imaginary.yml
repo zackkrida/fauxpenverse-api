@@ -54,4 +54,4 @@ jobs:
           cache-to: type=gha,scope=imaginary
           push: true
           tags: |
-            ghcr.io/wordpress/openverse-imaginary:latest
+            ghcr.io/wordpress/fauxpenverse-imaginary:latest

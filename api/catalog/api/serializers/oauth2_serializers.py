@@ -14,15 +14,15 @@ class OAuth2RegistrationSerializer(serializers.ModelSerializer):
 class OAuth2RegistrationSuccessful(serializers.ModelSerializer):
     name = serializers.CharField(
         help_text="A unique human-readable name for your application "
-        "or project requiring access to the Openverse API."
+        "or project requiring access to the fauxpenverse API."
     )
     client_id = serializers.CharField(
-        help_text="A publicly exposed string used by Openverse API "
+        help_text="A publicly exposed string used by fauxpenverse API "
         "to identify the application."
     )
     client_secret = serializers.CharField(
         help_text="A private string that authenticates the identity "
-        "of the application to the Openverse API."
+        "of the application to the fauxpenverse API."
     )
 
     class Meta:
@@ -44,5 +44,5 @@ class OAuth2KeyInfo(serializers.Serializer):
         help_text="The type of rate limit applied to your key. Can be "
         "'standard' or 'enhanced'; enhanced users enjoy higher rate "
         "limits than their standard key counterparts. Contact "
-        "Openverse if you need a higher rate limit."
+        "fauxpenverse if you need a higher rate limit."
     )

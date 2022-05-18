@@ -63,7 +63,7 @@ COPY --from=awf /usr/local/bin/audiowaveform /usr/local/bin
 RUN apt-get update \
       && apt-get install -y curl libpq-dev libexempi8 \
       && rm -rf /var/lib/apt/lists/* \
-    && mkdir -p /var/log/openverse_api/openverse_api.log
+    && mkdir -p /var/log/fauxpenverse_api/fauxpenverse_api.log
 
 # Copy code into the final image
 COPY . /api/

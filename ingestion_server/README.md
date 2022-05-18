@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Ingestion Server is a small private API for copying data from an upstream source and loading it into the Openverse API. This is a two-step process:
+Ingestion Server is a small private API for copying data from an upstream source and loading it into the fauxpenverse API. This is a two-step process:
 
 1. The data is copied from the upstream catalog database and into the downstream API database.
 2. Data from the downstream API database gets indexed in Elasticsearch.
@@ -32,11 +32,13 @@ automatically set to 100k records.
 ## Running on the host
 
 1. Create environment variables from the template file.
+
    ```bash
    just env
    ```
 
 2. Install Python dependencies.
+
    ```bash
    just install
    ```
@@ -56,6 +58,7 @@ Note that if a `.env` file exists in the folder you're running `just` from, it m
 ### Making requests
 
 To make cURL requests to the server
+
 ```bash
 pipenv run \
   curl \
@@ -139,5 +142,5 @@ The published image can be deployed using the minimal [`docker-compose.yml`](doc
 
 ### Old Docker Hub images
 
-- [openverse/ingestion_server](https://hub.docker.com/r/openverse/ingestion_server)
+- [fauxpenverse/ingestion_server](https://hub.docker.com/r/fauxpenverse/ingestion_server)
 - [creativecommons/ingestion_server](https://hub.docker.com/r/creativecommons/ingestion_server)

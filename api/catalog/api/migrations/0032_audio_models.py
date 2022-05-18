@@ -56,7 +56,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('identifier', models.UUIDField(help_text='The ID for media to be reported.')),
-                ('reason', models.CharField(choices=[('mature', 'mature'), ('dmca', 'dmca'), ('other', 'other')], help_text='The reason to report media to Openverse.', max_length=20)),
+                ('reason', models.CharField(choices=[('mature', 'mature'), ('dmca', 'dmca'), ('other', 'other')], help_text='The reason to report media to fauxpenverse.', max_length=20)),
                 ('description', models.TextField(blank=True, help_text='The explanation on why media is being reported.', max_length=500, null=True)),
                 ('status', models.CharField(choices=[('pending_review', 'pending_review'), ('mature_filtered', 'mature_filtered'), ('deindexed', 'deindexed'), ('no_action', 'no_action')], default='pending_review', max_length=20)),
             ],

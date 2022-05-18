@@ -52,7 +52,7 @@ jobs:
         with:
           context: ${{ matrix.image }}
           push: false
-          tags: openverse-${{ matrix.image }}
+          tags: fauxpenverse-${{ matrix.image }}
           cache-from: type=gha,scope=${{ matrix.image }}
           cache-to: type=gha,scope=${{ matrix.image }}
           outputs: type=docker,dest=/tmp/${{ matrix.image }}.tar
@@ -240,18 +240,18 @@ jobs:
       - name: Load and tag image `${{ matrix.image }}`
         run: |
           docker load --input /tmp/${{ matrix.image }}.tar
-          docker tag openverse-${{ matrix.image }} \
-            ghcr.io/wordpress/openverse-${{ matrix.image }}:latest
-          docker tag openverse-${{ matrix.image }} \
-            ghcr.io/wordpress/openverse-${{ matrix.image }}:${{ github.sha }}
-          docker tag openverse-${{ matrix.image }} \
-            ghcr.io/wordpress/openverse-${{ matrix.image }}:${{ github.ref_name }}
-          docker push --all-tags ghcr.io/wordpress/openverse-${{ matrix.image }}
+          docker tag fauxpenverse-${{ matrix.image }} \
+            ghcr.io/wordpress/fauxpenverse-${{ matrix.image }}:latest
+          docker tag fauxpenverse-${{ matrix.image }} \
+            ghcr.io/wordpress/fauxpenverse-${{ matrix.image }}:${{ github.sha }}
+          docker tag fauxpenverse-${{ matrix.image }} \
+            ghcr.io/wordpress/fauxpenverse-${{ matrix.image }}:${{ github.ref_name }}
+          docker push --all-tags ghcr.io/wordpress/fauxpenverse-${{ matrix.image }}
 
   publish-docs:
     name: Publish developer docs
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.repository == 'WordPress/openverse-api'
+    if: github.event_name == 'push' && github.repository == 'WordPress/fauxpenverse-api'
     needs:
       - build-images
 
@@ -285,7 +285,7 @@ jobs:
   docs-preview:
     name: Publish preview of developer docs for the branch
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.repository == 'WordPress/openverse-api'
+    if: github.event_name == 'pull_request' && github.repository == 'WordPress/fauxpenverse-api'
     needs:
       - build-images
 
@@ -353,8 +353,8 @@ jobs:
           body: |
             **API Developer Docs Preview**: _Ready_
 
-            <https://wordpress.github.io/openverse-api/_preview/${{ github.event.pull_request.number }}>
+            <https://wordpress.github.io/fauxpenverse-api/_preview/${{ github.event.pull_request.number }}>
 
             Please note that GitHub pages takes a little time to deploy newly pushed code, if the links above don't work or you see old versions, wait 5 minutes and try again.
 
-            You can check [the GitHub pages deployment action list](https://github.com/WordPress/openverse-api/actions/workflows/pages/pages-build-deployment) to see the current status of the deployments.
+            You can check [the GitHub pages deployment action list](https://github.com/zackkrida/fauxpenverse-api/actions/workflows/pages/pages-build-deployment) to see the current status of the deployments.

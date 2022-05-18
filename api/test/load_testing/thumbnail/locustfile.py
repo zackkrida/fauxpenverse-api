@@ -34,7 +34,7 @@ import grequests
 from locust import HttpLocust, TaskSet, between, task
 
 
-PROXY_URL = "https://api-dev.openverse.engineering/t/600/"
+PROXY_URL = "https://api-dev.fauxpenverse.engineering/t/600/"
 
 url_queue = gevent.queue.Queue()
 provider_counts = defaultdict(int)

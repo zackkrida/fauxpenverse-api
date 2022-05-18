@@ -25,10 +25,10 @@ def get_input(text):
 
 
 verification_msg_template = """
-The Openverse API OAuth2 email verification process has recently been fixed.
+The fauxpenverse API OAuth2 email verification process has recently been fixed.
 We have detected that you attempted to register an application using this email.
 
-To verify your Openverse API credentials, click on the following link:
+To verify your fauxpenverse API credentials, click on the following link:
 
 {link}
 
@@ -123,7 +123,7 @@ class Command(BaseCommand):
             # We don't have access to `request.build_absolute_uri` so we
             # have to build it ourselves for the production endpoint
             link = (
-                f"https://api.openverse.engineering/{reverse('verify-email', [token])}"
+                f"https://api.fauxpenverse.engineering/{reverse('verify-email', [token])}"
             )
             verification_msg = verification_msg_template.format(link=link)
             send_mail(

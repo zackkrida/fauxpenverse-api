@@ -21,8 +21,8 @@ from django.conf import settings  # noqa: E402 | Run ``setup`` before ``import``
 # Project information
 # ===================
 
-project = "Openverse API developer docs"
-author = "Openverse"
+project = "fauxpenverse API developer docs"
+author = "fauxpenverse"
 project_copyright = f"{author} <{settings.CONTACT_EMAIL}>"
 
 
@@ -43,7 +43,7 @@ html_theme = "furo"
 
 html_title = project
 html_favicon = (
-    "https://raw.githubusercontent.com/WordPress/openverse/master/brand/icon.svg"
+    "https://raw.githubusercontent.com/WordPress/fauxpenverse/master/brand/icon.svg"
 )
 
 html_theme_options = {

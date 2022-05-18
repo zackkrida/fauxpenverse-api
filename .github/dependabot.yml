@@ -6,7 +6,7 @@
 version: 2
 
 updates:
-  # Enable version updates for Python libs in Openverse API
+  # Enable version updates for Python libs in fauxpenverse API
   - package-ecosystem: pip
     # Look for a `Pipfile` in the `/api` directory
     directory: /api

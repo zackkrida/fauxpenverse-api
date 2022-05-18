@@ -42,8 +42,8 @@ DEBUG = config("DJANGO_DEBUG_ENABLED", default=False, cast=bool)
 ENVIRONMENT = config("ENVIRONMENT", default="local")
 
 ALLOWED_HOSTS = [
-    "api-dev.openverse.engineering",
-    "api.openverse.engineering",
+    "api-dev.fauxpenverse.engineering",
+    "api.fauxpenverse.engineering",
     gethostname(),
     gethostbyname(gethostname()),
 ]
@@ -53,7 +53,7 @@ if lb_url := config("LOAD_BALANCER_URL", default=""):
 
 if DEBUG:
     ALLOWED_HOSTS += [
-        "dev.openverse.test",  # used in local development
+        "dev.fauxpenverse.test",  # used in local development
         "localhost",
         "127.0.0.1",
         "0.0.0.0",
@@ -61,8 +61,8 @@ if DEBUG:
 
 # Domains that shortened links may point to
 SHORT_URL_WHITELIST = {
-    "api-dev.openverse.engineering",
-    "api.openverse.engineering",
+    "api-dev.fauxpenverse.engineering",
+    "api.fauxpenverse.engineering",
     "localhost:8000",
 }
 SHORT_URL_PATH_WHITELIST = ["/v1/list", "/v1/images/"]
@@ -91,7 +91,7 @@ INSTALLED_APPS = [
 
 if USE_S3:
     DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-    AWS_STORAGE_BUCKET_NAME = config("LOGOS_BUCKET", default="openverse_api-logos-prod")
+    AWS_STORAGE_BUCKET_NAME = config("LOGOS_BUCKET", default="fauxpenverse_api-logos-prod")
     AWS_S3_SIGNATURE_VERSION = "s3v4"
     INSTALLED_APPS.append("storages")
 
@@ -279,8 +279,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 # The version of the API. We follow the semantic version specification.
 API_VERSION = config("SEMANTIC_VERSION", default="Version not specified")
 
-# The contact email of the Openverse team
-CONTACT_EMAIL = config("CONTACT_EMAIL", default="openverse@wordpress.org")
+# The contact email of the fauxpenverse team
+CONTACT_EMAIL = config("CONTACT_EMAIL", default="fauxpenverse@wordpress.org")
 
 WATERMARK_ENABLED = config("WATERMARK_ENABLED", default=False, cast=bool)
 
@@ -324,7 +324,7 @@ if config("IS_PROXIED", default=True, cast=bool):
 
 # Trusted origins for CSRF
 # https://docs.djangoproject.com/en/4.0/releases/4.0/#csrf-trusted-origins-changes-4-0
-CSRF_TRUSTED_ORIGINS = ["https://*.openverse.engineering"]
+CSRF_TRUSTED_ORIGINS = ["https://*.fauxpenverse.engineering"]
 
 SENTRY_DSN = config(
     "SENTRY_DSN",

@@ -15,12 +15,12 @@ description_path = settings.BASE_DIR.joinpath(
 with open(description_path, "r") as description_file:
     description = description_file.read()
 
-tos_url = "https://wordpress.github.io/openverse-api/terms_of_service.html"
-license_url = "https://github.com/WordPress/openverse-api/blob/HEAD/LICENSE"
-logo_url = "https://raw.githubusercontent.com/WordPress/openverse/HEAD/brand/logo.svg"
+tos_url = "https://wordpress.github.io/fauxpenverse-api/terms_of_service.html"
+license_url = "https://github.com/zackkrida/fauxpenverse-api/blob/HEAD/LICENSE"
+logo_url = "https://raw.githubusercontent.com/WordPress/fauxpenverse/HEAD/brand/logo.svg"
 schema_view = get_schema_view(
     openapi.Info(
-        title="Openverse API consumer docs",
+        title="fauxpenverse API consumer docs",
         default_version=settings.API_VERSION,
         description=description,
         contact=openapi.Contact(email=settings.CONTACT_EMAIL),

@@ -65,7 +65,7 @@ class InternalNetworkExemption(ThrottleExemption):
 
     def is_exempt(self):
         """
-        Exempts requests coming from within Openverse's own
+        Exempts requests coming from within fauxpenverse's own
         network. In practical terms this prevents the Nuxt server
         from being rate-limited when server-side-rendering.
         """
@@ -81,7 +81,7 @@ class ApiKeyExemption(ThrottleExemption):
         """
         Exempt certain API keys from throttling. In practical
         terms this is used to prevent large consumers of
-        Openverse's API like WordPress.com and Jetpack from
+        fauxpenverse's API like WordPress.com and Jetpack from
         being rate-limited.
         """
         client_id, _, _ = get_token_info(str(self.request.auth))

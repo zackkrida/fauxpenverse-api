@@ -1,6 +1,6 @@
-# Openverse API developer docs
+# fauxpenverse API developer docs
 
-This documentation is focused towards developers who are building the Openverse API. The consumer documentation for the Openverse API can be found [here](https://api.openverse.engineering/).
+This documentation is focused towards developers who are building the fauxpenverse API. The consumer documentation for the fauxpenverse API can be found [here](https://api.fauxpenverse.engineering/).
 
 ```{toctree}
 :maxdepth: 2
@@ -16,5 +16,5 @@ terms_of_service
 :caption: External links
 :hidden:
 
-GitHub repo <https://github.com/WordPress/openverse-api>
+GitHub repo <https://github.com/zackkrida/fauxpenverse-api>
 ```

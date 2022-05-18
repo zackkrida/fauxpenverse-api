@@ -94,9 +94,9 @@ lint:
 cert:
     mkdir -p nginx/certs/
     mkcert \
-      -cert-file nginx/certs/openverse.crt \
-      -key-file nginx/certs/openverse.key \
-      dev.openverse.test localhost 127.0.0.1 ::1
+      -cert-file nginx/certs/fauxpenverse.crt \
+      -key-file nginx/certs/fauxpenverse.key \
+      dev.fauxpenverse.test localhost 127.0.0.1 ::1
 
 #################
 # Elasticsearch #

@@ -2,7 +2,7 @@ import os
 
 
 token = os.getenv("AUDIO_REQ_TOKEN", "DLBYIcfnKfolaXKcmMC8RIDCavc2hW")
-origin = os.getenv("AUDIO_REQ_ORIGIN", "https://api.openverse.engineering")
+origin = os.getenv("AUDIO_REQ_ORIGIN", "https://api.fauxpenverse.engineering")
 
 auth = f'-H "Authorization: Bearer {token}"' if token else ""
 identifier = "8624ba61-57f1-4f98-8a85-ece206c319cf"
